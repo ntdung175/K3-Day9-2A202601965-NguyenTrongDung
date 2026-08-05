@@ -1,0 +1,9 @@
+{
+  "cohort": "K3",
+  "starter_repo": "K3-Day9-2A202601965-NguyenTrongDung",
+  "policy_version": "EC_POLICY_V1",
+  "model_name": "gemma-2-9b-it",
+  "parameter_size": "9B",
+  "framework": "Custom Python Multi-Agent Architecture",
+  "runtime": "Python 3.10+"
+}
