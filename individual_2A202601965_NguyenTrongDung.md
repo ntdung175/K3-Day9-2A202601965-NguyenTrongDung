@@ -15,8 +15,8 @@
 
 | Deliverable / Module | File / Artifact | Nội dung công việc & Kết quả bàn giao |
 | --- | --- | --- |
-| **Kiến trúc Hệ thống** | [architecture.md](file:///Users/tdu/K3-Day9-2A202601965-NguyenTrongDung/architecture.md) | Xây dựng sơ đồ Mermaid Multi-Agent, định nghĩa vai trò 6 Agent, phân quyền truy cập dữ liệu CSV, ma trận `EC_POLICY_V1` và giao thức A2A Handoff Protocol. |
-| **Sổ tay Hướng dẫn** | [LAB_GUIDE_K3.md](file:///Users/tdu/K3-Day9-2A202601965-NguyenTrongDung/LAB_GUIDE_K3.md) | Xây dựng sổ tay lộ trình 240 phút (Phase 1-4) phân công vai trò cho từng thành viên trong nhóm. |
+| **Kiến trúc Hệ thống** | [architecture.md] | Xây dựng sơ đồ Mermaid Multi-Agent, định nghĩa vai trò 6 Agent, phân quyền truy cập dữ liệu CSV, ma trận `EC_POLICY_V1` và giao thức A2A Handoff Protocol. |
+| **Sổ tay Hướng dẫn** | [LAB_GUIDE_K3.md] | Xây dựng sổ tay lộ trình 240 phút (Phase 1-4) phân công vai trò cho từng thành viên trong nhóm. |
 | **Cấu hình Hệ thống** | `src/config.py` | Cấu hình đường dẫn, nạp an toàn API Key từ `.env`, thiết lập Cohort K3, Policy `EC_POLICY_V1` và Model `gemma-2-9b-it`. |
 | **Policy Agent Engine** | `src/policy_agent.py` | Thực thi ma trận quy tắc `EC_POLICY_V1` cho 6 primary issues (`canceled_order_paid`, `unavailable_order_paid`, `late_delivery_seller`, `late_delivery_logistics`, `valid_split_payment`, `unsupported_late_claim`), tính tiền refund và chuẩn hóa Evidence IDs. |
 | **Coordinator Agent** | `src/coordinator.py` | Tiếp nhận ticket khiếu nại `input/EC_xxx.json`, trích xuất `claimed_order_id`, khởi tạo gói Handoff A2A, điều phối luồng làm việc giữa các Domain Agents và hợp nhất output. |
