@@ -172,7 +172,7 @@ class PolicyAgent:
             "affected_entities": {
                 "order_ids": [order_id] if order_id else [],
                 "item_ids": item_ids[:5],
-                "seller_ids": seller_ids[:5] if primary_issue == "late_delivery_seller" else [],
+                "seller_ids": seller_ids[:5],
                 "payment_ids": payment_ids[:5]
             },
             "root_cause_analysis": {

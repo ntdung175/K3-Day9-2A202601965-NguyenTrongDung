@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K3 · E-commerce Dispute Resolution</title>
+  <style>
+    :root { --ink:#10253f; --muted:#6b778c; --line:#dce4ee; --bg:#f4f7fb; --card:#fff; --blue:#1769e0; --green:#087d5b; --amber:#b35b00; --red:#ba3341; }
+    * { box-sizing:border-box } body { margin:0; font:15px/1.5 Inter,system-ui,sans-serif; color:var(--ink); background:var(--bg) }
+    header { padding:34px max(24px,calc((100vw - 1180px)/2)); color:#fff; background:linear-gradient(120deg,#0b1f36,#1769e0) }
+    h1 { margin:0; font-size:clamp(24px,4vw,38px) } header p { margin:6px 0 0; opacity:.8 }
+    main { max-width:1180px; margin:24px auto 60px; padding:0 20px }
+    .controls,.card { background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 5px 16px #18293b0a }
+    .controls { display:flex; gap:12px; align-items:center; padding:14px; flex-wrap:wrap }
+    button,select { font:inherit; border:1px solid var(--line); border-radius:8px; padding:9px 12px; background:#fff; color:var(--ink); cursor:pointer }
+    button.primary { background:var(--blue); border-color:var(--blue); color:white } #status { margin-left:auto; color:var(--muted); font-size:13px }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:16px }.card { padding:18px }.summary{grid-column:span 12}.assessment{grid-column:span 5}.finance{grid-column:span 7}.entities{grid-column:span 6}.evidence{grid-column:span 6}.message{grid-column:span 12}
+    h2 { margin:0 0 12px; font-size:16px }.label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.06em }.issue { font-size:24px; font-weight:700; margin:3px 0 12px }.badges,.chips { display:flex; flex-wrap:wrap; gap:7px }.badge,.chip { border-radius:999px; padding:4px 9px; font-size:12px; background:#eaf2ff; color:#1453aa }.badge.action { background:#fff0f1;color:var(--red) }.badge.none { background:#e9f8f2;color:var(--green) }.chip { background:#f0f4f8;color:#40536b; overflow-wrap:anywhere }
+    dl { display:grid; grid-template-columns:1fr auto; gap:8px 14px; margin:0 } dt { color:var(--muted) } dd { margin:0; font-weight:650 }.refund { color:var(--green); font-size:22px }.cause { border-left:3px solid var(--blue); padding-left:10px; margin:10px 0 }.empty { color:var(--muted); font-style:italic }
+    pre { white-space:pre-wrap; margin:0; color:#34475e; font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace }.footer { color:var(--muted); font-size:13px; margin-top:16px }
+    @media(max-width:720px){.assessment,.finance,.entities,.evidence{grid-column:span 12}#status{margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+  <header><h1>Multi-Agent Dispute Resolution</h1><p>Olist · EC_POLICY_V1 · 50 grounded e-commerce cases</p></header>
+  <main>
+    <section class="controls"><button id="prev">← Case trước</button><select id="case"></select><button id="next">Case sau →</button><button class="primary" id="reload">Tải lại</button><span id="status">Sẵn sàng</span></section>
+    <section class="grid">
+      <article class="card summary"><span class="label">Luồng xử lý</span><div class="badges"><span class="badge">Coordinator</span><span class="badge">Order & Seller</span><span class="badge">Delivery</span><span class="badge">Payment</span><span class="badge">Policy</span><span class="badge">Verifier</span></div></article>
+      <article class="card assessment"><h2>Đánh giá</h2><div class="label">Primary issue</div><div id="issue" class="issue">—</div><div class="badges"><span id="caseStatus" class="badge">—</span><span id="confidence" class="badge">—</span></div><div id="cause"></div><h2>Hành động</h2><div id="actions" class="chips"></div></article>
+      <article class="card finance"><h2>Giải quyết tài chính</h2><dl><dt>Item total</dt><dd id="item">—</dd><dt>Freight total</dt><dd id="freight">—</dd><dt>Payment total</dt><dd id="payment">—</dd><dt>Refund đề xuất</dt><dd id="refund" class="refund">—</dd></dl></article>
+      <article class="card entities"><h2>Thực thể liên quan</h2><div id="entities"></div></article>
+      <article class="card evidence"><h2>Evidence IDs đã verifier</h2><div id="evidence" class="chips"></div></article>
+      <article class="card message"><h2>Yêu cầu khách hàng</h2><pre id="message">—</pre></article>
+    </section>
+    <p class="footer">Chạy UI: <code>python -m http.server 8000</code> rồi mở <code>http://localhost:8000/demo.html</code>.</p>
+  </main>
+  <script>
+    const select=document.querySelector('#case'), status=document.querySelector('#status');
+    const ids=Array.from({length:50},(_,i)=>`EC_${String(i+1).padStart(3,'0')}`); ids.forEach(id=>select.add(new Option(id,id)));
+    const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n||0);
+    const chips=(target,values)=>target.innerHTML=values?.length?values.map(x=>`<span class="chip">${x}</span>`).join(''):'<span class="empty">Không có</span>';
+    async function load(){ const id=select.value; status.textContent=`Đang tải ${id}…`; try { const [input,output]=await Promise.all([fetch(`input/${id}.json`).then(r=>r.json()),fetch(`output/${id}.json`).then(r=>r.json())]); const a=output.assessment,f=output.financial_resolution,r=output.root_cause_analysis;
+      document.querySelector('#issue').textContent=a.primary_issue; const cs=document.querySelector('#caseStatus'); cs.textContent=a.case_status; cs.className='badge '+(a.case_status==='action_required'?'action':'none'); document.querySelector('#confidence').textContent=`Confidence ${a.confidence}`;
+      document.querySelector('#cause').innerHTML=r.ranked_causes.map(c=>`<div class="cause">#${c.rank} · ${c.cause_code}</div>`).join('')+ (r.responsible_parties.length?`<div class="label">Responsible</div><div class="chips">${r.responsible_parties.map(p=>`<span class="chip">${p.party_type}: ${p.party_id}</span>`).join('')}</div>`:'');
+      document.querySelector('#item').textContent=money(f.item_total_brl); document.querySelector('#freight').textContent=money(f.freight_total_brl); document.querySelector('#payment').textContent=money(f.payment_total_brl); document.querySelector('#refund').textContent=money(f.recommended_refund_brl);
+      const entity=document.querySelector('#entities'); entity.innerHTML=Object.entries(output.affected_entities).map(([k,v])=>`<div class="label" style="margin-top:9px">${k}</div><div class="chips">${v.length?v.map(x=>`<span class="chip">${x}</span>`).join(''):'<span class="empty">Không có</span>'}</div>`).join(''); chips(document.querySelector('#evidence'),output.evidence_ids); chips(document.querySelector('#actions'),output.resolution_actions); document.querySelector('#message').textContent=input.customer_request.message; status.textContent=`${id} · Verifier pass`; }
+      catch(e){status.textContent='Không tải được output. Hãy chạy pipeline trước.'; console.error(e)} }
+    select.onchange=load; document.querySelector('#reload').onclick=load; document.querySelector('#prev').onclick=()=>{select.selectedIndex=(select.selectedIndex+49)%50;load()}; document.querySelector('#next').onclick=()=>{select.selectedIndex=(select.selectedIndex+1)%50;load()}; load();
+  </script>
+</body>
+</html>
