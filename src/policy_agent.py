@@ -69,7 +69,10 @@ class PolicyAgent:
         # Primary Issue Evaluation Order
         primary_issue = None
         case_status = "no_action"
-        confidence = 0.95
+        # The six official policy branches are deterministic and fully grounded
+        # in CSV facts. Use maximum confidence once a branch is proven; the
+        # unknown/fallback branch below remains deliberately lower confidence.
+        confidence = 1.0
         root_cause_code = ""
         responsible_parties = []
         recommended_refund_brl = 0.0
@@ -147,17 +150,18 @@ class PolicyAgent:
             if evidence_id and evidence_id not in evidence_ids and len(evidence_ids) < 10:
                 evidence_ids.append(evidence_id)
 
+        # Follow the canonical ordering shown in README: order, items,
+        # payments, sellers, then the policy evidence.
         add_evidence(f"order:{order_id}" if order_id else "")
-        add_evidence(f"policy:{root_cause_code}" if root_cause_code else "")
-        for party in responsible_parties:
-            if party.get("party_type") == "seller":
-                add_evidence(f"seller:{party.get('party_id', '')}")
         for i_id in item_ids[:5]:
             add_evidence(f"item:{i_id}")
         for p_id in payment_ids[:5]:
             add_evidence(f"payment:{p_id}")
-        for s_id in seller_ids[:5]:
-            add_evidence(f"seller:{s_id}")
+        # Seller evidence is causal only when seller handoff caused the delay.
+        if primary_issue == "late_delivery_seller":
+            for s_id in seller_ids[:5]:
+                add_evidence(f"seller:{s_id}")
+        add_evidence(f"policy:{root_cause_code}" if root_cause_code else "")
 
         return {
             "assessment": {
@@ -168,7 +172,7 @@ class PolicyAgent:
             "affected_entities": {
                 "order_ids": [order_id] if order_id else [],
                 "item_ids": item_ids[:5],
-                "seller_ids": seller_ids[:5],
+                "seller_ids": seller_ids[:5] if primary_issue == "late_delivery_seller" else [],
                 "payment_ids": payment_ids[:5]
             },
             "root_cause_analysis": {
