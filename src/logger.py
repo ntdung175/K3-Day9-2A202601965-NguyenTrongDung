@@ -9,12 +9,12 @@ from src.config import LOGGING_DIR
 
 class TraceLogger:
     def __init__(self, log_dir: Path = LOGGING_DIR):
+        log_dir.mkdir(parents=True, exist_ok=True)
         self.trace_file = log_dir / "trace.jsonl"
         
     def clear(self):
         """Reset trace.jsonl for a fresh run."""
-        if self.trace_file.exists():
-            self.trace_file.unlink()
+        self.trace_file.write_text("", encoding="utf-8")
 
     def log_step(self, case_id: str, agent_name: str, action: str, details: Dict[str, Any]):
         entry = {
