@@ -1,0 +1,53 @@
+{
+  "assessment": {
+    "primary_issue": "late_delivery_seller",
+    "case_status": "action_required",
+    "confidence": 0.95
+  },
+  "affected_entities": {
+    "order_ids": [
+      "203096f03d82e0dffbc41ebc2e2bcfb7"
+    ],
+    "item_ids": [
+      "203096f03d82e0dffbc41ebc2e2bcfb7:1"
+    ],
+    "seller_ids": [
+      "633ecdf879b94b5337cca303328e4a25"
+    ],
+    "payment_ids": [
+      "203096f03d82e0dffbc41ebc2e2bcfb7:1"
+    ]
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "SELLER_HANDOFF_AFTER_LIMIT",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "seller",
+        "party_id": "633ecdf879b94b5337cca303328e4a25"
+      }
+    ]
+  },
+  "evidence_ids": [
+    "order:203096f03d82e0dffbc41ebc2e2bcfb7",
+    "item:203096f03d82e0dffbc41ebc2e2bcfb7:1",
+    "payment:203096f03d82e0dffbc41ebc2e2bcfb7:1",
+    "seller:633ecdf879b94b5337cca303328e4a25",
+    "policy:SELLER_HANDOFF_AFTER_LIMIT"
+  ],
+  "financial_resolution": {
+    "currency": "BRL",
+    "item_total_brl": 109.9,
+    "freight_total_brl": 8.96,
+    "payment_total_brl": 118.86,
+    "recommended_refund_brl": 8.96
+  },
+  "resolution_actions": [
+    "refund_freight"
+  ],
+  "case_id": "EC_015"
+}

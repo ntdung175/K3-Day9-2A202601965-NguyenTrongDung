@@ -1,0 +1,10 @@
+{
+  "case_id": "EC_028",
+  "opened_at": "2018-10-18T00:00:00-03:00",
+  "customer_request": {
+    "language": "vi",
+    "message": "Đơn hàng bị báo không có sẵn. Tôi muốn làm thủ tục refund đầy đủ.",
+    "claimed_order_id": "c82a457d646f77c8f151e12a3e517ed2"
+  },
+  "policy_version": "EC_POLICY_V1"
+}

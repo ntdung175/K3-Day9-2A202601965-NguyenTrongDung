@@ -1,0 +1,55 @@
+{
+  "assessment": {
+    "primary_issue": "late_delivery_logistics",
+    "case_status": "action_required",
+    "confidence": 0.95
+  },
+  "affected_entities": {
+    "order_ids": [
+      "f31535f21d145b2345e2bf7f09d62322"
+    ],
+    "item_ids": [
+      "f31535f21d145b2345e2bf7f09d62322:1"
+    ],
+    "seller_ids": [
+      "91f0eec23d4a61d7d7caeefa3f0ad1ca"
+    ],
+    "payment_ids": [
+      "f31535f21d145b2345e2bf7f09d62322:2",
+      "f31535f21d145b2345e2bf7f09d62322:1"
+    ]
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "CARRIER_DELIVERED_AFTER_ESTIMATE",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "logistics_provider",
+        "party_id": "LOGISTICS_PROVIDER"
+      }
+    ]
+  },
+  "evidence_ids": [
+    "order:f31535f21d145b2345e2bf7f09d62322",
+    "item:f31535f21d145b2345e2bf7f09d62322:1",
+    "payment:f31535f21d145b2345e2bf7f09d62322:2",
+    "payment:f31535f21d145b2345e2bf7f09d62322:1",
+    "seller:91f0eec23d4a61d7d7caeefa3f0ad1ca",
+    "policy:CARRIER_DELIVERED_AFTER_ESTIMATE"
+  ],
+  "financial_resolution": {
+    "currency": "BRL",
+    "item_total_brl": 199.0,
+    "freight_total_brl": 24.26,
+    "payment_total_brl": 223.26,
+    "recommended_refund_brl": 24.26
+  },
+  "resolution_actions": [
+    "refund_freight"
+  ],
+  "case_id": "EC_029"
+}

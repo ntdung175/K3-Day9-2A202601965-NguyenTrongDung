@@ -1,0 +1,150 @@
+{"case_id": "EC_001", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_001.json"}}
+{"case_id": "EC_001", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 33.34}}
+{"case_id": "EC_001", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_002", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_002.json"}}
+{"case_id": "EC_002", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 96.01}}
+{"case_id": "EC_002", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_003", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_003.json"}}
+{"case_id": "EC_003", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 51.0}}
+{"case_id": "EC_003", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_004", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_004.json"}}
+{"case_id": "EC_004", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_004", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_005", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_005.json"}}
+{"case_id": "EC_005", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 191.46}}
+{"case_id": "EC_005", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_006", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_006.json"}}
+{"case_id": "EC_006", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 274.11}}
+{"case_id": "EC_006", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_007", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_007.json"}}
+{"case_id": "EC_007", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 233.87}}
+{"case_id": "EC_007", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_008", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_008.json"}}
+{"case_id": "EC_008", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "canceled_order_paid", "recommended_refund": 139.96}}
+{"case_id": "EC_008", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_009", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_009.json"}}
+{"case_id": "EC_009", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 84.0}}
+{"case_id": "EC_009", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_010", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_010.json"}}
+{"case_id": "EC_010", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 97.68}}
+{"case_id": "EC_010", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_011", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_011.json"}}
+{"case_id": "EC_011", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 132.46}}
+{"case_id": "EC_011", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_012", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_012.json"}}
+{"case_id": "EC_012", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 134.38}}
+{"case_id": "EC_012", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_013", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_013.json"}}
+{"case_id": "EC_013", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 615.53}}
+{"case_id": "EC_013", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_014", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_014.json"}}
+{"case_id": "EC_014", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unavailable_order_paid", "recommended_refund": 167.82}}
+{"case_id": "EC_014", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_015", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_015.json"}}
+{"case_id": "EC_015", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 8.96}}
+{"case_id": "EC_015", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_016", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_016.json"}}
+{"case_id": "EC_016", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 15.53}}
+{"case_id": "EC_016", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_017", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_017.json"}}
+{"case_id": "EC_017", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 28.95}}
+{"case_id": "EC_017", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_018", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_018.json"}}
+{"case_id": "EC_018", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 17.12}}
+{"case_id": "EC_018", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_019", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_019.json"}}
+{"case_id": "EC_019", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 45.7}}
+{"case_id": "EC_019", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_020", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_020.json"}}
+{"case_id": "EC_020", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 14.36}}
+{"case_id": "EC_020", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_021", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_021.json"}}
+{"case_id": "EC_021", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 17.84}}
+{"case_id": "EC_021", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_022", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_022.json"}}
+{"case_id": "EC_022", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 7.39}}
+{"case_id": "EC_022", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_023", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_023.json"}}
+{"case_id": "EC_023", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 14.1}}
+{"case_id": "EC_023", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_024", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_024.json"}}
+{"case_id": "EC_024", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 25.61}}
+{"case_id": "EC_024", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_025", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_025.json"}}
+{"case_id": "EC_025", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 17.6}}
+{"case_id": "EC_025", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_026", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_026.json"}}
+{"case_id": "EC_026", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 21.53}}
+{"case_id": "EC_026", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_027", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_027.json"}}
+{"case_id": "EC_027", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 16.46}}
+{"case_id": "EC_027", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_028", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_028.json"}}
+{"case_id": "EC_028", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 8.22}}
+{"case_id": "EC_028", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_029", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_029.json"}}
+{"case_id": "EC_029", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 24.26}}
+{"case_id": "EC_029", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_030", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_030.json"}}
+{"case_id": "EC_030", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 13.52}}
+{"case_id": "EC_030", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_031", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_031.json"}}
+{"case_id": "EC_031", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 9.74}}
+{"case_id": "EC_031", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_032", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_032.json"}}
+{"case_id": "EC_032", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 17.26}}
+{"case_id": "EC_032", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_033", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_033.json"}}
+{"case_id": "EC_033", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_seller", "recommended_refund": 45.45}}
+{"case_id": "EC_033", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_034", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_034.json"}}
+{"case_id": "EC_034", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "late_delivery_logistics", "recommended_refund": 18.68}}
+{"case_id": "EC_034", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_035", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_035.json"}}
+{"case_id": "EC_035", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "valid_split_payment", "recommended_refund": 0.0}}
+{"case_id": "EC_035", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_036", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_036.json"}}
+{"case_id": "EC_036", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_036", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_037", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_037.json"}}
+{"case_id": "EC_037", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_037", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_038", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_038.json"}}
+{"case_id": "EC_038", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_038", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_039", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_039.json"}}
+{"case_id": "EC_039", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_039", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_040", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_040.json"}}
+{"case_id": "EC_040", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_040", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_041", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_041.json"}}
+{"case_id": "EC_041", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_041", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_042", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_042.json"}}
+{"case_id": "EC_042", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_042", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_043", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_043.json"}}
+{"case_id": "EC_043", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "valid_split_payment", "recommended_refund": 0.0}}
+{"case_id": "EC_043", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_044", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_044.json"}}
+{"case_id": "EC_044", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_044", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_045", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_045.json"}}
+{"case_id": "EC_045", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_045", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_046", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_046.json"}}
+{"case_id": "EC_046", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_046", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_047", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_047.json"}}
+{"case_id": "EC_047", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_047", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_048", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_048.json"}}
+{"case_id": "EC_048", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_048", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_049", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_049.json"}}
+{"case_id": "EC_049", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_049", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}
+{"case_id": "EC_050", "agent": "CoordinatorAgent", "action": "RECEIVE_TICKET", "details": {"ticket_file": "EC_050.json"}}
+{"case_id": "EC_050", "agent": "PolicyAgent", "action": "EVALUATE_POLICY", "details": {"primary_issue": "unsupported_late_claim", "recommended_refund": 0.0}}
+{"case_id": "EC_050", "agent": "VerifierAgent", "action": "VERIFY_SCHEMA", "details": {"status": "SUCCESS"}}

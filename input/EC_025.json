@@ -1,0 +1,10 @@
+{
+  "case_id": "EC_025",
+  "opened_at": "2018-10-18T00:00:00-03:00",
+  "customer_request": {
+    "language": "vi",
+    "message": "Tôi cần hỗ trợ đối soát giao dịch thanh toán cho đơn hàng đã đặt.",
+    "claimed_order_id": "33a3edb84b9df4cb49546859b990ac6d"
+  },
+  "policy_version": "EC_POLICY_V1"
+}
