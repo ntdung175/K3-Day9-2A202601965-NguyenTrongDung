@@ -7,11 +7,12 @@ import json
 from pathlib import Path
 from typing import Dict, Any, Optional
 
+from src.data_engine import DataEngine
 from src.policy_agent import PolicyAgent
 
 class CoordinatorAgent:
     def __init__(self, data_loader=None, verifier_agent=None):
-        self.data_loader = data_loader
+        self.data_loader = data_loader if data_loader is not None else DataEngine()
         self.policy_agent = PolicyAgent()
         self.verifier_agent = verifier_agent
 
