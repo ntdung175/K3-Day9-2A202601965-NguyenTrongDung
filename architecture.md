@@ -7,6 +7,8 @@
 
 Hệ thống xử lý khiếu nại thương mại điện tử Multi-Agent bao gồm 6 Agent chuyên trách phối hợp theo mô hình tập trung (Centralized Orchestration). **Coordinator Agent** đóng vai trò hạt nhân điều phối, nhận ticket khiếu nại khách hàng, phân chia nhiệm vụ cho các Domain Agent thu thập chứng cứ từ dữ liệu Olist, chuyển giao cho **Policy Agent** ra quyết định và cuối cùng qua **Verifier Agent** kiểm tra tính hợp lệ trước khi hoàn tất JSON output.
 
+![Kiến trúc Multi-Agent K3](architecture_diagram.png)
+
 ```mermaid
 flowchart TD
     CustomerTicket["Ticket khiếu nại\n(input/EC_xxx.json)"] --> Coordinator["Coordinator Agent\n(Điều phối luồng & Handoff)"]
