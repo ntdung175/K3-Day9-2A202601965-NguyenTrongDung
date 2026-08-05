@@ -1,121 +1,37 @@
-# Member Role Report — Day 9: Multi Agent A2A
+# Báo cáo cá nhân — K3 Day 09 Multi-Agent E-commerce Dispute Resolution
 
-> Mỗi thành viên trong nhóm tự hoàn thành mẫu này để báo cáo đúng vai trò, phần việc và mức hiểu của mình. Không sao chép nguyên báo cáo chung hoặc báo cáo của thành viên khác. Thay nội dung trong dấu `[ ]` và xóa các dòng hướng dẫn không cần thiết trước khi nộp.
+| Trường | Nội dung |
+| --- | --- |
+| Họ và tên | Nguyễn Trọng Dũng |
+| MSSV | 2A202601965 |
+| Vai trò | QA, Infrastructure & Verifier Engineer (thành viên 3) |
+| Chính sách | `EC_POLICY_V1` |
 
-## 1. Thông tin cá nhân
+## Phần việc phụ trách
 
-| Thông tin       | Nội dung     |
-| --------------- | ------------ |
-| Họ và tên       | [Họ và tên]  |
-| MSSV            | [MSSV]       |
-| Khóa/Lớp        | [K3]         |
-| Vai trò chính   | [Vai trò]    |
-| Ngày hoàn thành | [YYYY-MM-DD] |
+| Deliverable | File | Kết quả |
+| --- | --- | --- |
+| Verifier Agent | `src/verifier_agent.py` | Hard gate schema, giới hạn mảng, BRL, confidence và grounding evidence theo facts CSV. |
+| Trace logging | `src/logger.py` | Ghi trace JSONL cho từng bước Coordinator, Policy và Verifier. |
+| Batch runner | `run_pipeline.py` | Sinh input, chạy 50 case, ghi output và trace. |
+| QA & packaging | `validate_outputs.py`, `package_submission.py` | Kiểm tra 50 JSON trước khi tạo ZIP chỉ chứa `output/`. |
 
-## 2. Vai trò và phạm vi công việc
+## Contract và kiểm chứng
 
-### Phần việc sở hữu
+Verifier nhận draft output cùng facts order từ `DataEngine`. Nó chặn evidence ID không thuộc order/item/payment/seller thực tế, kiểm tra format evidence, các giới hạn `5/10/3/3/5`, confidence trong `[0,1]`, BRL và tổng tiền khớp facts.
 
-| Module/deliverable | File/hàm phụ trách | Input nhận vào | Output bàn giao   | Trạng thái                            |
-| ------------------ | ------------------ | -------------- | ----------------- | ------------------------------------- |
-| [Phần việc]        | [File/hàm]         | [Input]        | [Output/artifact] | [Hoàn thành/Một phần/Chưa hoàn thành] |
-| [Phần việc]        | [File/hàm]         | [Input]        | [Output/artifact] | [Hoàn thành/Một phần/Chưa hoàn thành] |
-
-Chỉ nhận ownership cho phần bạn trực tiếp thực hiện. Liên hệ rõ phần việc của bạn với đầu vào, đầu ra và các thành viên phụ thuộc vào phần đó.
-
-### Việc hỗ trợ ngoài phạm vi chính
-
-| Hoạt động                 | Thành viên/module được hỗ trợ | Kết quả                 |
-| ------------------------- | ----------------------------- | ----------------------- |
-| [Debug/tích hợp/tài liệu] | [Tên hoặc module]             | [Kết quả và bằng chứng] |
-
-## 3. Kết quả theo vai trò
-
-| Nhiệm vụ đã thực hiện | File/hàm/artifact liên quan | Kết quả bàn giao          | Cách xác minh   |
-| --------------------- | --------------------------- | ------------------------- | --------------- |
-| [Mô tả cụ thể]        | [Đường dẫn file]            | [Artifact/metrics/report] | [Lệnh/artifact] |
-| [Mô tả cụ thể]        | [Đường dẫn file]            | [Artifact/metrics/report] | [Lệnh/artifact] |
-
-Nêu một output cụ thể mà phần việc của bạn tạo ra hoặc giúp xác minh:
-
-[Mô tả artifact, metric, report hoặc kết quả tích hợp.]
-
-## 4. Giải thích phần kỹ thuật đã thực hiện
-
-### Vấn đề cần giải quyết
-
-[Phần của bạn giải quyết vấn đề gì trong pipeline?]
-
-### Cách triển khai
-
-[Mô tả thuật toán, quy tắc dữ liệu, orchestration hoặc quyết định chính. Không chỉ chép lại tên hàm.]
-
-### Input, output và contract
-
-| Thành phần              | Mô tả                                  |
-| ----------------------- | -------------------------------------- |
-| Input                   | [Schema, artifact hoặc tham số]        |
-| Output                  | [Schema, artifact hoặc giá trị trả về] |
-| Module phụ thuộc        | [Module/file liên quan]                |
-| Module sử dụng output   | [Module/file liên quan]                |
-| Điều kiện lỗi cần xử lý | [Trường hợp thực tế]                   |
-
-### Cách xác minh
-
-```bash
-[Ghi lệnh thực tế đã chạy]
+```powershell
+python run_pipeline.py
+python validate_outputs.py
+python package_submission.py
 ```
 
-- **Kết quả mong đợi:** [Mô tả.]
-- **Kết quả thực tế:** [Mô tả.]
-- **Artifact/log:** [Đường dẫn; không chứa secret.]
+Kết quả đã kiểm chứng: 50 input, 50 output, 150 dòng `logging/trace.jsonl`; QA pass và tạo `submission.zip`.
 
-## 5. Một quyết định kỹ thuật quan trọng
+## Quyết định kỹ thuật
 
-- **Bối cảnh:** [Vấn đề hoặc lựa chọn cần quyết định.]
-- **Các phương án đã cân nhắc:** [Ít nhất hai phương án.]
-- **Phương án đã chọn:** [Lựa chọn.]
-- **Lý do:** [Trade-off về correctness, data quality, reproducibility, cost hoặc độ phức tạp.]
-- **Bằng chứng quyết định phù hợp:** [Metric, artifact hoặc kết quả thử nghiệm.]
+Chọn hard-gate verifier thay vì chỉ cắt ngắn danh sách: cắt có thể che evidence sai. Validator kiểm tra nguồn evidence từ facts đã nạp CSV để giảm false positive.
 
-## 6. Một lỗi hoặc blocker đã xử lý
+## Cam kết
 
-- **Triệu chứng/lỗi nguyên văn:** [Che toàn bộ secret trước khi ghi.]
-- **Lệnh hoặc bước tái hiện:** [Lệnh/bước.]
-- **Nguyên nhân gốc:** [Root cause, không chỉ mô tả triệu chứng.]
-- **Cách xử lý:** [Thay đổi cụ thể.]
-- **Cách xác minh sau khi sửa:** [Lệnh và kết quả.]
-- **Điều học được:** [Bài học kỹ thuật.]
-
-Nếu chưa xử lý xong:
-
-- **Phạm vi bị ảnh hưởng:** [Module/artifact.]
-- **Những gì đã loại trừ:** [Các giả thuyết đã kiểm tra.]
-- **Bước tiếp theo:** [Hành động có thể kiểm chứng.]
-
-## 7. Hiểu biết về luồng end-to-end
-
-Giải thích ngắn gọn bằng lời của bạn:
-
-1. Dữ liệu đi từ Crossref đến vector index như thế nào?
-2. Evaluation set và ground-truth document IDs dùng để đo retrieval/answer quality ra sao?
-3. Quality checks khác freshness monitoring ở điểm nào trong bài lab?
-4. Vì sao phải dùng cùng test set cho baseline, corrupted và repaired?
-5. Repair được xem là thành công dựa trên artifact và metric nào?
-
-**Câu trả lời:**
-
-[Viết câu trả lời tại đây.]
-
-## 8. Cam kết của thành viên
-
-Đánh dấu sau khi tự kiểm tra:
-
-- [ ] Nội dung báo cáo phản ánh đúng phần việc và mức hiểu của tôi.
-- [ ] Tôi có thể giải thích luồng end-to-end, không chỉ module mình phụ trách.
-- [ ] Tôi không ghi “đã chạy thành công” cho phần chưa được kiểm chứng.
-- [ ] Báo cáo không chứa `.env`, API key, token hoặc secret.
-- [ ] Báo cáo này không phải bản sao nguyên văn của báo cáo nhóm hoặc báo cáo thành viên khác.
-
-**Họ và tên:** [Họ và tên]
-**Ngày xác nhận:** [YYYY-MM-DD]
+Không commit API key, `.env`, `.venv` hoặc `submission.zip`. Model và kích thước model được khai báo trong `logging/metadata.json`.
